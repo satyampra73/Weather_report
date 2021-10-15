@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Weather Report</string>
+    <string name="get_whether_city_Id">Whether By City ID</string>
+    <string name="get_whether_Name">Whether By Name</string>
+    <string name="City_id">City ID</string>
+</resources>
