@@ -10,6 +10,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.satyam.whetherreport.R;
+import com.satyam.whetherreport.WeatherDataService;
+import com.satyam.whetherreport.WeatherReportModel;
+
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {

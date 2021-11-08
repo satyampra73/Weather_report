@@ -77,7 +77,6 @@ public class WeatherDataService {
                     JSONArray consolidated_weather_list = response.getJSONArray("consolidated_weather");
 
 
-
                     for (int i = 0; i < consolidated_weather_list.length(); i++) {
                         WeatherReportModel one_day_weather = new WeatherReportModel();
                         JSONObject first_day_fromApi = (JSONObject) consolidated_weather_list.get(i);
@@ -115,12 +114,14 @@ public class WeatherDataService {
         MySingleton.getInstance(context).addToRequestQueue(request);
 
     }
+
     public interface GetCityForecastByNameCallback {
         void onError(String message);
 
         void onResponse(List<WeatherReportModel> weatherReportModel);
     }
-    public void getCityForecastByName(String CityName, GetCityForecastByNameCallback getCityForecastByNameCallback){
+
+    public void getCityForecastByName(String CityName, GetCityForecastByNameCallback getCityForecastByNameCallback) {
         getCityId(CityName, new VolleyResponseListener() {
             @Override
             public void onError(String message) {
@@ -137,7 +138,7 @@ public class WeatherDataService {
 
                     @Override
                     public void onResponse(List<WeatherReportModel> weatherReportModel) {
-getCityForecastByNameCallback.onResponse(weatherReportModel);
+                        getCityForecastByNameCallback.onResponse(weatherReportModel);
                     }
                 });
 
